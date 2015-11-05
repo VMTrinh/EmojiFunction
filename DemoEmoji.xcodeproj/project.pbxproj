@@ -15,6 +15,13 @@
 		DF3AD80F1BCC681800743A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3AD80D1BCC681800743A36 /* LaunchScreen.storyboard */; };
 		DF3AD81A1BCC681800743A36 /* DemoEmojiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3AD8191BCC681800743A36 /* DemoEmojiTests.m */; };
 		DF3AD8251BCC681800743A36 /* DemoEmojiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3AD8241BCC681800743A36 /* DemoEmojiUITests.m */; };
+		DF43A41F1BE9F24E00737588 /* emoji_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43A4191BE9F24E00737588 /* emoji_1.png */; };
+		DF43A4201BE9F24E00737588 /* emoji_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43A41A1BE9F24E00737588 /* emoji_2.png */; };
+		DF43A4211BE9F24E00737588 /* emoji_3.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43A41B1BE9F24E00737588 /* emoji_3.png */; };
+		DF43A4221BE9F24E00737588 /* emoji_4.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43A41C1BE9F24E00737588 /* emoji_4.png */; };
+		DF43A4231BE9F24E00737588 /* emoji_5.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43A41D1BE9F24E00737588 /* emoji_5.png */; };
+		DF43A4241BE9F24E00737588 /* emoji_6.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43A41E1BE9F24E00737588 /* emoji_6.png */; };
+		DF97BFBE1BDF4A04009BD920 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF97BFBD1BDF4A04009BD920 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		DF3AD8201BCC681800743A36 /* DemoEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3AD8241BCC681800743A36 /* DemoEmojiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoEmojiUITests.m; sourceTree = "<group>"; };
 		DF3AD8261BCC681800743A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF43A4191BE9F24E00737588 /* emoji_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_1.png; sourceTree = "<group>"; };
+		DF43A41A1BE9F24E00737588 /* emoji_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_2.png; sourceTree = "<group>"; };
+		DF43A41B1BE9F24E00737588 /* emoji_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_3.png; sourceTree = "<group>"; };
+		DF43A41C1BE9F24E00737588 /* emoji_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_4.png; sourceTree = "<group>"; };
+		DF43A41D1BE9F24E00737588 /* emoji_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_5.png; sourceTree = "<group>"; };
+		DF43A41E1BE9F24E00737588 /* emoji_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_6.png; sourceTree = "<group>"; };
+		DF97BFBD1BDF4A04009BD920 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF97BFBE1BDF4A04009BD920 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,7 @@
 		DF3AD7F31BCC681700743A36 = {
 			isa = PBXGroup;
 			children = (
+				DF97BFBD1BDF4A04009BD920 /* QuartzCore.framework */,
 				DF3AD7FE1BCC681700743A36 /* DemoEmoji */,
 				DF3AD8181BCC681800743A36 /* DemoEmojiTests */,
 				DF3AD8231BCC681800743A36 /* DemoEmojiUITests */,
@@ -101,6 +117,7 @@
 		DF3AD7FE1BCC681700743A36 /* DemoEmoji */ = {
 			isa = PBXGroup;
 			children = (
+				DF43A4181BE9F24E00737588 /* img */,
 				DF3AD8021BCC681800743A36 /* AppDelegate.h */,
 				DF3AD8031BCC681800743A36 /* AppDelegate.m */,
 				DF3AD8051BCC681800743A36 /* ViewController.h */,
@@ -138,6 +155,19 @@
 				DF3AD8261BCC681800743A36 /* Info.plist */,
 			);
 			path = DemoEmojiUITests;
+			sourceTree = "<group>";
+		};
+		DF43A4181BE9F24E00737588 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				DF43A4191BE9F24E00737588 /* emoji_1.png */,
+				DF43A41A1BE9F24E00737588 /* emoji_2.png */,
+				DF43A41B1BE9F24E00737588 /* emoji_3.png */,
+				DF43A41C1BE9F24E00737588 /* emoji_4.png */,
+				DF43A41D1BE9F24E00737588 /* emoji_5.png */,
+				DF43A41E1BE9F24E00737588 /* emoji_6.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +273,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF43A4211BE9F24E00737588 /* emoji_3.png in Resources */,
 				DF3AD80F1BCC681800743A36 /* LaunchScreen.storyboard in Resources */,
 				DF3AD80C1BCC681800743A36 /* Assets.xcassets in Resources */,
+				DF43A4241BE9F24E00737588 /* emoji_6.png in Resources */,
+				DF43A4221BE9F24E00737588 /* emoji_4.png in Resources */,
+				DF43A41F1BE9F24E00737588 /* emoji_1.png in Resources */,
 				DF3AD80A1BCC681800743A36 /* Main.storyboard in Resources */,
+				DF43A4231BE9F24E00737588 /* emoji_5.png in Resources */,
+				DF43A4201BE9F24E00737588 /* emoji_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,9 +450,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoEmoji/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EBIZWORLD.DemoEmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -425,9 +463,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoEmoji/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EBIZWORLD.DemoEmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -498,6 +538,7 @@
 				DF3AD82B1BCC681800743A36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF3AD82C1BCC681800743A36 /* Build configuration list for PBXNativeTarget "DemoEmojiTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +547,7 @@
 				DF3AD82E1BCC681800743A36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF3AD82F1BCC681800743A36 /* Build configuration list for PBXNativeTarget "DemoEmojiUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +556,7 @@
 				DF3AD8311BCC681800743A36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
