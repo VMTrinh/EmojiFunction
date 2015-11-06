@@ -20,9 +20,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hpd-jn-5kM">
                                 <rect key="frame" x="0.0" y="280" width="320" height="200"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8k-tE-Vf8">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="163"/>
-                                    </scrollView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="toG-Zs-Yxp">
                                         <rect key="frame" x="0.0" y="163" width="320" height="37"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,6 +27,9 @@
                                             <action selector="changePage:" destination="BYZ-38-t0r" eventType="valueChanged" id="1hb-vC-mP0"/>
                                         </connections>
                                     </pageControl>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8k-tE-Vf8">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="130"/>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>

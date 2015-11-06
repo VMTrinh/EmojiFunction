@@ -12,6 +12,7 @@
 {
     BOOL pageControlBeingUsed;
     NSMutableArray *myObject;
+    NSMutableArray *arrEmoji_;
 }
 
 @end
