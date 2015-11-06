@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50D02A011A47486C7DE3CF59 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AE15A411CF7F7682054FE1 /* libPods.a */; };
+		CB2E788E16DC99EFCDC6B56A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AE15A411CF7F7682054FE1 /* libPods.a */; };
+		DF0128B71BED1C7C009EFE50 /* DemoEmoji.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF0128B51BED1C7C009EFE50 /* DemoEmoji.xcdatamodeld */; };
+		DF0128C01BED1D70009EFE50 /* Emoji+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0128B91BED1D70009EFE50 /* Emoji+CoreDataProperties.m */; };
+		DF0128C11BED1D70009EFE50 /* Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0128BB1BED1D70009EFE50 /* Emoji.m */; };
+		DF0128CE1BED22C2009EFE50 /* CategoryEmoji+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0128CB1BED22C2009EFE50 /* CategoryEmoji+CoreDataProperties.m */; };
+		DF0128CF1BED22C2009EFE50 /* CategoryEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0128CD1BED22C2009EFE50 /* CategoryEmoji.m */; };
 		DF3AD8011BCC681800743A36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3AD8001BCC681800743A36 /* main.m */; };
 		DF3AD8041BCC681800743A36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3AD8031BCC681800743A36 /* AppDelegate.m */; };
 		DF3AD8071BCC681800743A36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3AD8061BCC681800743A36 /* ViewController.m */; };
@@ -42,6 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50AE15A411CF7F7682054FE1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		77036CE9216F5599E03F63EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B358A487E2E2592D226B0188 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DF0128B61BED1C7C009EFE50 /* DemoEmoji.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoEmoji.xcdatamodel; sourceTree = "<group>"; };
+		DF0128B81BED1D70009EFE50 /* Emoji+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Emoji+CoreDataProperties.h"; sourceTree = "<group>"; };
+		DF0128B91BED1D70009EFE50 /* Emoji+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Emoji+CoreDataProperties.m"; sourceTree = "<group>"; };
+		DF0128BA1BED1D70009EFE50 /* Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emoji.h; sourceTree = "<group>"; };
+		DF0128BB1BED1D70009EFE50 /* Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emoji.m; sourceTree = "<group>"; };
+		DF0128CA1BED22C2009EFE50 /* CategoryEmoji+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CategoryEmoji+CoreDataProperties.h"; sourceTree = "<group>"; };
+		DF0128CB1BED22C2009EFE50 /* CategoryEmoji+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CategoryEmoji+CoreDataProperties.m"; sourceTree = "<group>"; };
+		DF0128CC1BED22C2009EFE50 /* CategoryEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEmoji.h; sourceTree = "<group>"; };
+		DF0128CD1BED22C2009EFE50 /* CategoryEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEmoji.m; sourceTree = "<group>"; };
 		DF3AD7FC1BCC681700743A36 /* DemoEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3AD8001BCC681800743A36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF3AD8021BCC681800743A36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF97BFBE1BDF4A04009BD920 /* QuartzCore.framework in Frameworks */,
+				CB2E788E16DC99EFCDC6B56A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D02A011A47486C7DE3CF59 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07C0AB4AEA03EE8C17E5180A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77036CE9216F5599E03F63EA /* Pods.debug.xcconfig */,
+				B358A487E2E2592D226B0188 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2C42E27181669D3B566D718C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50AE15A411CF7F7682054FE1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DF3AD7F31BCC681700743A36 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +139,8 @@
 				DF3AD8181BCC681800743A36 /* DemoEmojiTests */,
 				DF3AD8231BCC681800743A36 /* DemoEmojiUITests */,
 				DF3AD7FD1BCC681700743A36 /* Products */,
+				07C0AB4AEA03EE8C17E5180A /* Pods */,
+				2C42E27181669D3B566D718C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +157,14 @@
 		DF3AD7FE1BCC681700743A36 /* DemoEmoji */ = {
 			isa = PBXGroup;
 			children = (
+				DF0128CA1BED22C2009EFE50 /* CategoryEmoji+CoreDataProperties.h */,
+				DF0128CB1BED22C2009EFE50 /* CategoryEmoji+CoreDataProperties.m */,
+				DF0128CC1BED22C2009EFE50 /* CategoryEmoji.h */,
+				DF0128CD1BED22C2009EFE50 /* CategoryEmoji.m */,
+				DF0128B81BED1D70009EFE50 /* Emoji+CoreDataProperties.h */,
+				DF0128B91BED1D70009EFE50 /* Emoji+CoreDataProperties.m */,
+				DF0128BA1BED1D70009EFE50 /* Emoji.h */,
+				DF0128BB1BED1D70009EFE50 /* Emoji.m */,
 				DF43A4181BE9F24E00737588 /* img */,
 				DF3AD8021BCC681800743A36 /* AppDelegate.h */,
 				DF3AD8031BCC681800743A36 /* AppDelegate.m */,
@@ -127,6 +175,7 @@
 				DF3AD80D1BCC681800743A36 /* LaunchScreen.storyboard */,
 				DF3AD8101BCC681800743A36 /* Info.plist */,
 				DF3AD7FF1BCC681800743A36 /* Supporting Files */,
+				DF0128B51BED1C7C009EFE50 /* DemoEmoji.xcdatamodeld */,
 			);
 			path = DemoEmoji;
 			sourceTree = "<group>";
@@ -177,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF3AD8291BCC681800743A36 /* Build configuration list for PBXNativeTarget "DemoEmoji" */;
 			buildPhases = (
+				1B4BC7F8EACC0D5068134EEB /* Check Pods Manifest.lock */,
 				DF3AD7F81BCC681700743A36 /* Sources */,
 				DF3AD7F91BCC681700743A36 /* Frameworks */,
 				DF3AD7FA1BCC681700743A36 /* Resources */,
+				B98E344885801E598FCF67FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF3AD82C1BCC681800743A36 /* Build configuration list for PBXNativeTarget "DemoEmojiTests" */;
 			buildPhases = (
+				7BC804DF3636E8F3F569B012 /* Check Pods Manifest.lock */,
 				DF3AD8111BCC681800743A36 /* Sources */,
 				DF3AD8121BCC681800743A36 /* Frameworks */,
 				DF3AD8131BCC681800743A36 /* Resources */,
+				B86D9A640A9122C39E5741CB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,14 +354,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B4BC7F8EACC0D5068134EEB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BC804DF3636E8F3F569B012 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B86D9A640A9122C39E5741CB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B98E344885801E598FCF67FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF3AD7F81BCC681700743A36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0128C11BED1D70009EFE50 /* Emoji.m in Sources */,
 				DF3AD8071BCC681800743A36 /* ViewController.m in Sources */,
+				DF0128CE1BED22C2009EFE50 /* CategoryEmoji+CoreDataProperties.m in Sources */,
 				DF3AD8041BCC681800743A36 /* AppDelegate.m in Sources */,
+				DF0128CF1BED22C2009EFE50 /* CategoryEmoji.m in Sources */,
+				DF0128C01BED1D70009EFE50 /* Emoji+CoreDataProperties.m in Sources */,
 				DF3AD8011BCC681800743A36 /* main.m in Sources */,
+				DF0128B71BED1C7C009EFE50 /* DemoEmoji.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +568,7 @@
 		};
 		DF3AD82A1BCC681800743A36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77036CE9216F5599E03F63EA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoEmoji/Info.plist;
@@ -460,6 +582,7 @@
 		};
 		DF3AD82B1BCC681800743A36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B358A487E2E2592D226B0188 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DemoEmoji/Info.plist;
@@ -473,6 +596,7 @@
 		};
 		DF3AD82D1BCC681800743A36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77036CE9216F5599E03F63EA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DemoEmojiTests/Info.plist;
@@ -485,6 +609,7 @@
 		};
 		DF3AD82E1BCC681800743A36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B358A487E2E2592D226B0188 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DemoEmojiTests/Info.plist;
@@ -559,6 +684,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF0128B51BED1C7C009EFE50 /* DemoEmoji.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF0128B61BED1C7C009EFE50 /* DemoEmoji.xcdatamodel */,
+			);
+			currentVersion = DF0128B61BED1C7C009EFE50 /* DemoEmoji.xcdatamodel */;
+			path = DemoEmoji.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DF3AD7F41BCC681700743A36 /* Project object */;
 }

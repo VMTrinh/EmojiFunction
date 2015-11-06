@@ -7,16 +7,75 @@
 //
 
 #import "AppDelegate.h"
+#import <CoreData+MagicalRecord.h>
+#import "Emoji.h"
+#import "CategoryEmoji.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+{
+    NSMutableArray *myCategory;
+    NSMutableArray *myEmoji;
+    NSMutableArray *myEmoji1;
+    NSMutableArray *myEmoji2;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /*
+     Init Core Data
+     */
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"DemoEmoji"];
+    
+    [CategoryEmoji MR_truncateAll];
+    [Emoji MR_truncateAll];
+    
+    //Init Category
+    myCategory = [[NSMutableArray alloc] init];
+    [myCategory addObject:@"emoji_1.png"];
+    [myCategory addObject:@"emoji_3.png"];
+    [myCategory addObject:@"emoji_5.png"];
+    for (int i = 0; i < myCategory.count; i++) {
+        CategoryEmoji *category = [CategoryEmoji MR_createEntity];
+        category.nameCategory = [myCategory objectAtIndex:i];
+        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:nil];
+    }
+    //Init Emoji
+    myEmoji = [[NSMutableArray alloc] init];
+    [myEmoji addObject:@"emoji_1.png"];
+    [myEmoji addObject:@"emoji_2.png"];
+    for (int i = 0; i < myEmoji.count; i++) {
+        Emoji *emoji = [Emoji MR_createEntity];
+        emoji.name_emoji = [myEmoji objectAtIndex:i];
+        emoji.category = [myCategory objectAtIndex:0];
+        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:nil];
+    }
+    
+    //Init Emoji 1
+    myEmoji1 = [[NSMutableArray alloc] init];
+    [myEmoji1 addObject:@"emoji_3.png"];
+    [myEmoji1 addObject:@"emoji_4.png"];
+    for (int i = 0; i < myEmoji1.count; i++) {
+        Emoji *emoji = [Emoji MR_createEntity];
+        emoji.name_emoji = [myEmoji1 objectAtIndex:i];
+        emoji.category = [myCategory objectAtIndex:1];
+        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:nil];
+    }
+    
+    //Init Emoji 2
+    myEmoji2 = [[NSMutableArray alloc] init];
+    [myEmoji2 addObject:@"emoji_5.png"];
+    [myEmoji2 addObject:@"emoji_6.png"];
+    for (int i = 0; i < myEmoji2.count; i++) {
+        Emoji *emoji = [Emoji MR_createEntity];
+        emoji.name_emoji = [myEmoji2 objectAtIndex:i];
+        emoji.category = [myCategory objectAtIndex:2];
+        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:nil];
+    }
+    
     return YES;
 }
 

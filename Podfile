@@ -1,0 +1,5 @@
+platform :ios, '7.0'
+link_with 'DemoEmoji' , 'DemoEmojiTests'
+pod 'AFNetworking'
+pod 'MagicalRecord','2.2'
+pod 'FLAnimatedImage', '~> 1.0'

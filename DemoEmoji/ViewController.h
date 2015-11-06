@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData+MagicalRecord.h>
 
 @interface ViewController : UIViewController
 {
     BOOL pageControlBeingUsed;
-    NSMutableArray *myObject;
-    NSMutableArray *arrEmoji_;
 }
 
 @end

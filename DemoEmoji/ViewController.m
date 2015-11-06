@@ -7,10 +7,15 @@
 //
 
 #import "ViewController.h"
+#import <CoreData+MagicalRecord.h>
+#import "Emoji.h"
+#import "CategoryEmoji.h"
 
 @interface ViewController ()<UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
     UICollectionView *collectionView;
+    NSMutableArray *getAllCategory;
+    NSMutableArray *getAllEmoji;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *viewEmoji;
@@ -23,24 +28,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (getAllCategory == nil) {
+        getAllCategory = [[NSMutableArray alloc]init];
+    }
+    if (getAllCategory.count > 0) {
+        [getAllCategory removeAllObjects];
+    }
+    if (getAllEmoji == nil) {
+        getAllEmoji = [[NSMutableArray alloc]init];
+    }
+    if (getAllEmoji.count > 0) {
+        [getAllEmoji removeAllObjects];
+    }
+    
+    NSArray *arrCategory = [CategoryEmoji MR_findAll];
+    for (int i = 0; i < arrCategory.count; i++) {
+        CategoryEmoji *category = [arrCategory objectAtIndex:i];
+        [getAllCategory addObject:category.nameCategory];
+    }
+    
+    getAllEmoji = [[NSMutableArray alloc]init];
+    NSArray *arrEmoji = [Emoji MR_findByAttribute:@"category" withValue:[getAllCategory objectAtIndex:0]];
+    for (int i = 0; i < arrEmoji.count; i++) {
+        Emoji *emoji = [arrEmoji objectAtIndex:i];
+        [getAllEmoji addObject:emoji.name_emoji];
+    }
+    [collectionView reloadData];
     
     UIView *buttonsView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _viewEmoji.frame.size.width, 35)];
     [buttonsView setBackgroundColor:[UIColor greenColor]];
     [_viewEmoji addSubview:buttonsView];
-    myObject = [[NSMutableArray alloc] init];
-    [myObject addObject:@"emoji_1.png"];
-    [myObject addObject:@"emoji_3.png"];
-    
-    arrEmoji_ = [[NSMutableArray alloc]init];
-    [arrEmoji_ addObject:@"emoji_1.png"];
-    [arrEmoji_ addObject:@"emoji_2.png"];
     
     [self.scroll setDelegate:self];
     pageControlBeingUsed = NO;
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHight = screenRect.size.height;
-    for (int i = 0; i < myObject.count; i ++) {
+    for (int i = 0; i < getAllCategory.count; i ++) {
         CGRect frame;
         frame.origin.x = self.scroll.frame.size.width * i;
         frame.origin.y = 0;
@@ -59,33 +83,33 @@
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setFrame:CGRectMake(35*i + 5, 0, 35, 35)];
-        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@", [myObject objectAtIndex:i]]] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@", [getAllCategory objectAtIndex:i]]] forState:UIControlStateNormal];
         button.tag = i;
         [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
         [buttonsView addSubview:button];
     }
     
-    self.scroll.contentSize = CGSizeMake(self.scroll.frame.size.width * [myObject count], self.scroll.frame.size.height-100);
+    self.scroll.contentSize = CGSizeMake(self.scroll.frame.size.width * [getAllCategory count], self.scroll.frame.size.height-100);
     self.pageControl.currentPage = 0;
-    self.pageControl.numberOfPages = [myObject count];
+    self.pageControl.numberOfPages = [getAllCategory count];
     [self.pageControl setBackgroundColor:[UIColor purpleColor]];
     [self.scroll setBackgroundColor:[UIColor greenColor]];
 }
 
 -(void)clickButton:(UIButton*)sender{
-    NSLog(@"You had clicked: %d", sender.tag);
+    [self.pageControl setCurrentPage:[sender tag]];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return arrEmoji_.count;
+    return getAllEmoji.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionViewa cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell=[collectionViewa dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[arrEmoji_ objectAtIndex:indexPath.row]]]];
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[getAllEmoji objectAtIndex:indexPath.row]]]];
     
     cell.backgroundColor=[UIColor greenColor];
     return cell;
@@ -98,16 +122,21 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
     if (!pageControlBeingUsed) {
+        [getAllEmoji removeAllObjects];
         // Switch the indicator when more than 50% of the previous/next page is visible
         CGFloat pageWidth = self.scroll.frame.size.width;
         int page = floor((self.scroll.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
         self.pageControl.currentPage = page;
-        if (arrEmoji_.count > 0) {
-            [arrEmoji_ removeAllObjects];
-            [arrEmoji_ addObject:@"emoji_3.png"];
-            [arrEmoji_ addObject:@"emoji_4.png"];
+        //Change Emoji when scroll
+        NSString *str = [getAllCategory objectAtIndex:page];
+        NSArray *arr = [Emoji MR_findByAttribute:@"category" withValue:str];
+        if (arr.count > 0) {
+            for (int i = 0; i < arr.count; i++) {
+                Emoji *emoji = [arr objectAtIndex:i];
+                [getAllEmoji addObject:emoji.name_emoji];
+            }
+            [collectionView reloadData];
         }
-        [collectionView reloadData];
     }
 }
 

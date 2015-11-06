@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
+    <entity name="CategoryEmoji" representedClassName="CategoryEmoji" syncable="YES">
+        <attribute name="nameCategory" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Emoji" representedClassName="Emoji" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_emoji" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Emoji" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="CategoryEmoji" positionX="-45" positionY="18" width="128" height="60"/>
+    </elements>
+</model>
