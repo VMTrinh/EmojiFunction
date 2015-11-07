@@ -16,6 +16,7 @@
     UICollectionView *collectionView;
     NSMutableArray *getAllCategory;
     NSMutableArray *getAllEmoji;
+    NSMutableArray *arrCollectionView;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *viewEmoji;
@@ -41,6 +42,13 @@
         [getAllEmoji removeAllObjects];
     }
     
+    if (arrCollectionView == nil) {
+        arrCollectionView = [[NSMutableArray alloc]init];
+    }
+    if (arrCollectionView.count > 0) {
+        [arrCollectionView removeAllObjects];
+    }
+    
     NSArray *arrCategory = [CategoryEmoji MR_findAll];
     for (int i = 0; i < arrCategory.count; i++) {
         CategoryEmoji *category = [arrCategory objectAtIndex:i];
@@ -53,7 +61,7 @@
         Emoji *emoji = [arrEmoji objectAtIndex:i];
         [getAllEmoji addObject:emoji.name_emoji];
     }
-    [collectionView reloadData];
+//    [collectionView reloadData];
     
     UIView *buttonsView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _viewEmoji.frame.size.width, 35)];
     [buttonsView setBackgroundColor:[UIColor greenColor]];
@@ -79,7 +87,10 @@
         collectionView.showsVerticalScrollIndicator = NO;
         [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
         [collectionView setBackgroundColor:[UIColor purpleColor]];
+        collectionView.tag = i;
         [self.scroll addSubview:collectionView];
+        
+        [arrCollectionView addObject: collectionView];
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setFrame:CGRectMake(35*i + 5, 0, 35, 35)];
@@ -97,7 +108,7 @@
 }
 
 -(void)clickButton:(UIButton*)sender{
-    [self.pageControl setCurrentPage:[sender tag]];
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -113,6 +124,10 @@
     
     cell.backgroundColor=[UIColor greenColor];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -135,8 +150,10 @@
                 Emoji *emoji = [arr objectAtIndex:i];
                 [getAllEmoji addObject:emoji.name_emoji];
             }
-            [collectionView reloadData];
         }
+//        UICollectionView *collectionV = [arrCollectionView objectAtIndex:page];
+//        [collectionV reloadData];
+        [arrCollectionView[page] reloadData];
     }
 }
 

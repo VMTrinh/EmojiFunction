@@ -21,6 +21,7 @@
     NSMutableArray *myEmoji;
     NSMutableArray *myEmoji1;
     NSMutableArray *myEmoji2;
+    NSMutableArray *myEmoji3;
 }
 
 
@@ -36,8 +37,9 @@
     //Init Category
     myCategory = [[NSMutableArray alloc] init];
     [myCategory addObject:@"emoji_1.png"];
-    [myCategory addObject:@"emoji_3.png"];
-    [myCategory addObject:@"emoji_5.png"];
+    [myCategory addObject:@"emoji_4.png"];
+    [myCategory addObject:@"emoji_6.png"];
+    [myCategory addObject:@"emoji_8.png"];
     for (int i = 0; i < myCategory.count; i++) {
         CategoryEmoji *category = [CategoryEmoji MR_createEntity];
         category.nameCategory = [myCategory objectAtIndex:i];
@@ -47,6 +49,7 @@
     myEmoji = [[NSMutableArray alloc] init];
     [myEmoji addObject:@"emoji_1.png"];
     [myEmoji addObject:@"emoji_2.png"];
+    [myEmoji addObject:@"emoji_3.png"];
     for (int i = 0; i < myEmoji.count; i++) {
         Emoji *emoji = [Emoji MR_createEntity];
         emoji.name_emoji = [myEmoji objectAtIndex:i];
@@ -56,8 +59,8 @@
     
     //Init Emoji 1
     myEmoji1 = [[NSMutableArray alloc] init];
-    [myEmoji1 addObject:@"emoji_3.png"];
     [myEmoji1 addObject:@"emoji_4.png"];
+    [myEmoji1 addObject:@"emoji_5.png"];
     for (int i = 0; i < myEmoji1.count; i++) {
         Emoji *emoji = [Emoji MR_createEntity];
         emoji.name_emoji = [myEmoji1 objectAtIndex:i];
@@ -67,12 +70,24 @@
     
     //Init Emoji 2
     myEmoji2 = [[NSMutableArray alloc] init];
-    [myEmoji2 addObject:@"emoji_5.png"];
     [myEmoji2 addObject:@"emoji_6.png"];
+    [myEmoji2 addObject:@"emoji_7.png"];
     for (int i = 0; i < myEmoji2.count; i++) {
         Emoji *emoji = [Emoji MR_createEntity];
         emoji.name_emoji = [myEmoji2 objectAtIndex:i];
         emoji.category = [myCategory objectAtIndex:2];
+        [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:nil];
+    }
+    
+    //Init Emoji 3
+    myEmoji3 = [[NSMutableArray alloc] init];
+    [myEmoji3 addObject:@"emoji_8.png"];
+    [myEmoji3 addObject:@"emoji_9.png"];
+    [myEmoji3 addObject:@"emoji_10.png"];
+    for (int i = 0; i < myEmoji3.count; i++) {
+        Emoji *emoji = [Emoji MR_createEntity];
+        emoji.name_emoji = [myEmoji3 objectAtIndex:i];
+        emoji.category = [myCategory objectAtIndex:3];
         [MagicalRecord saveUsingCurrentThreadContextWithBlockAndWait:nil];
     }
     
