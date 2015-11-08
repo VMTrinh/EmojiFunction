@@ -33,6 +33,7 @@
 		DF3AD81A1BCC681800743A36 /* DemoEmojiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3AD8191BCC681800743A36 /* DemoEmojiTests.m */; };
 		DF3AD8251BCC681800743A36 /* DemoEmojiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3AD8241BCC681800743A36 /* DemoEmojiUITests.m */; };
 		DF97BFBE1BDF4A04009BD920 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF97BFBD1BDF4A04009BD920 /* QuartzCore.framework */; };
+		DFA4DE1C1BEF2F5900227DA9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA4DE1B1BEF2F5900227DA9 /* bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		DF3AD8241BCC681800743A36 /* DemoEmojiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoEmojiUITests.m; sourceTree = "<group>"; };
 		DF3AD8261BCC681800743A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF97BFBD1BDF4A04009BD920 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DFA4DE1B1BEF2F5900227DA9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		DF43A4181BE9F24E00737588 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				DFA4DE1B1BEF2F5900227DA9 /* bg.png */,
 				DF0128D01BED641D009EFE50 /* emoji_1.png */,
 				DF0128D11BED641D009EFE50 /* emoji_2.png */,
 				DF0128D21BED641D009EFE50 /* emoji_3.png */,
@@ -302,6 +305,7 @@
 				TargetAttributes = {
 					DF3AD7FB1BCC681700743A36 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 45D84HJ79U;
 					};
 					DF3AD8141BCC681800743A36 = {
 						CreatedOnToolsVersion = 7.0;
@@ -342,6 +346,7 @@
 				DF3AD80F1BCC681800743A36 /* LaunchScreen.storyboard in Resources */,
 				DF0128E51BED64D2009EFE50 /* emoji_9.png in Resources */,
 				DF3AD80C1BCC681800743A36 /* Assets.xcassets in Resources */,
+				DFA4DE1C1BEF2F5900227DA9 /* bg.png in Resources */,
 				DF0128DF1BED641D009EFE50 /* emoji_6.png in Resources */,
 				DF0128E01BED641D009EFE50 /* emoji_7.png in Resources */,
 				DF0128DD1BED641D009EFE50 /* emoji_4.png in Resources */,

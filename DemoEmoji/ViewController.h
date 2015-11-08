@@ -12,7 +12,9 @@
 @interface ViewController : UIViewController
 {
     BOOL pageControlBeingUsed;
+    int currentCollectionView;
 }
+@property (weak, nonatomic) IBOutlet UIView *viewDetail;
 
 @end
 

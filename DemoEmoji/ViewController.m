@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_viewDetail setHidden:YES];
     if (getAllCategory == nil) {
         getAllCategory = [[NSMutableArray alloc]init];
     }
@@ -61,7 +62,6 @@
         Emoji *emoji = [arrEmoji objectAtIndex:i];
         [getAllEmoji addObject:emoji.name_emoji];
     }
-//    [collectionView reloadData];
     
     UIView *buttonsView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _viewEmoji.frame.size.width, 35)];
     [buttonsView setBackgroundColor:[UIColor greenColor]];
@@ -108,6 +108,27 @@
 }
 
 -(void)clickButton:(UIButton*)sender{
+    [getAllEmoji removeAllObjects];
+    // Update the scroll view to the appropriate page
+    CGRect frame;
+    frame.origin.x = self.scroll.frame.size.width * sender.tag;
+    frame.origin.y = 0;
+    frame.size = self.scroll.frame.size;
+    [self.scroll scrollRectToVisible:frame animated:YES];
+    self.pageControl.currentPage = sender.tag;
+    //Change Emoji when scroll
+    NSString *str = [getAllCategory objectAtIndex:sender.tag];
+    NSArray *arr = [Emoji MR_findByAttribute:@"category" withValue:str];
+    if (arr.count > 0) {
+        for (int i = 0; i < arr.count; i++) {
+            Emoji *emoji = [arr objectAtIndex:i];
+            [getAllEmoji addObject:emoji.name_emoji];
+        }
+    }
+    //        UICollectionView *collectionV = [arrCollectionView objectAtIndex:page];
+    //        [collectionV reloadData];
+    [arrCollectionView[sender.tag] reloadData];
+    pageControlBeingUsed = YES;
     
 }
 
@@ -127,7 +148,9 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+//    UICollectionView *collectionV = arrCollectionView[currentCollectionView];
+//    UICollectionViewLayoutAttributes *attributes = [collectionV layoutAttributesForItemAtIndexPath:indexPath];
+//    CGRect rect = attributes.frame;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -141,6 +164,7 @@
         // Switch the indicator when more than 50% of the previous/next page is visible
         CGFloat pageWidth = self.scroll.frame.size.width;
         int page = floor((self.scroll.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+        currentCollectionView = page;
         self.pageControl.currentPage = page;
         //Change Emoji when scroll
         NSString *str = [getAllCategory objectAtIndex:page];
